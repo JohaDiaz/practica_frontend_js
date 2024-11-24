@@ -1,6 +1,6 @@
 export function buildAuthorizedSession() {
   return `
-    <a href="/create-tweet.html">Crear Tweet</a>
+    <a href="/create-product.html">Crear Producto</a>
     <button>cerrar sesión</button>
   `
 }
