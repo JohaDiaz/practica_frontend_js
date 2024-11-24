@@ -4,8 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wallapop Frontend</title>
+    <link rel="stylesheet" href="spinner.css" />
+    <link rel="stylesheet" href="./notifications/notification-style.css" />
 </head>
 <body>
     <h1>Wallapop Frontend</h1>
+    <section id="session"></section>
+    <section class="spinner hidden">
+        <div class="lds-ring">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </section>
+    <section id="notifications-container"></section>
+    <section id="products-container"></section>
+    <script type="module" src="index.js"></script>
 </body>
 </html>
