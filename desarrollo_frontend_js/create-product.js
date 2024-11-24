@@ -1,13 +1,12 @@
-import { createTweetController } from "./create-product/create-product-controller.js";
+import { createProductController } from "./create-product/create-product-controller.js";
 import { isUserLoggedIn } from "./utils/auth.js"
 
-debugger;
 if (!isUserLoggedIn()) {
   window.location.href = "/"
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  const createTweetForm = document.querySelector('form');
+  const createProductForm = document.querySelector('form');
 
-  createTweetController(createTweetForm)
+  createProductController(createProductForm)
 })

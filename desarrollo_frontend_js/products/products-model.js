@@ -11,7 +11,7 @@ export async function getProducts() {
         throw new Error("Recurso no existente");
         }
 
-        return products;
+        return message;
 
     } catch (error) {
         throw new Error(error.message)
