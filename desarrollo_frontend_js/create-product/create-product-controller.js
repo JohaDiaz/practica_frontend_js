@@ -5,8 +5,18 @@ export function createProductController(createProductForm) {
   createProductForm.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    const textAreaElement = createProductForm.querySelector("#product-content");
-    const productMessage = textAreaElement.value;
+    const productName = createProductForm.querySelector("#product-name");
+    const productDescription = createProductForm.querySelector("#product-description");
+    const productPrice = createProductForm.querySelector("#product-price");
+    const productImage = createProductForm.querySelector("#product-image");
+    const productTransaction = createProductForm.querySelector("#product-transaction");
+    const productMessage = {
+      productName: productName.value,
+      productDescription: productDescription.value,
+      productPrice: productPrice.value,
+      productImage: productImage.value,
+      productTransaction: productTransaction.value
+    }
 
     handleProductCreation(productMessage)
   })

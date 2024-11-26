@@ -10,6 +10,7 @@ function drawProducts(products, productsContainer) {
     products.forEach(product => {
       const newProduct = buildProduct(product);
       productsContainer.appendChild(newProduct);
+    
     })
   }
 }
