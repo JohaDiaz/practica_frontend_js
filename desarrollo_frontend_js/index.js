@@ -1,5 +1,4 @@
 import { notificationController } from "./notifications/notifications-controller.js";
-import { sessionController } from "./session/session-controller.js";
 import { sessionController2  } from "./session-joha/sessionjoha-controller.js";
 import { productsController } from "./products/products-controller.js";
 

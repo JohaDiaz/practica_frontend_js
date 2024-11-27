@@ -24,7 +24,7 @@ export function signupController(form) {
     }
 
     if (password !== passwordConfirm) {
-      errors.push('las passwords no sin iguales')
+      errors.push('las passwords no son iguales')
     }
 
     for (const error of errors) {
