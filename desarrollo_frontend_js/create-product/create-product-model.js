@@ -1,10 +1,11 @@
-export async function createProduct(product) {
+export async function createProduct(message) {
   const token = localStorage.getItem('jwt');
 
-  const response = await fetch("http://localhost:8000/api/products", {
+
+  const response = await fetch("http://localhost:8000/api/tweets", {
     method: "POST",
     body: JSON.stringify({
-      product
+      message
     }),
     headers: {
       "Content-type": "application/json",
