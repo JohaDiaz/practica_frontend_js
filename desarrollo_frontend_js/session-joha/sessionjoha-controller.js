@@ -5,7 +5,7 @@ import { buildAuthorizedSession, buildUnauthorizedSession  } from "./sessionjoha
 export function sessionController2(sessionJoha) {
 
   if (isUserLoggedIn()) {
-    sessionJoha.innerHTML = buildAuthorizedSession();
+    buildAuthorizedSession();
 
     const closeSessionButton = sessionJoha.querySelector("button")
     closeSessionButton.addEventListener("click", () => {
@@ -15,6 +15,6 @@ export function sessionController2(sessionJoha) {
     })
   } else {
  
-    sessionJoha.innerHTML = buildUnauthorizedSession()
+    buildUnauthorizedSession()
 }
 }
