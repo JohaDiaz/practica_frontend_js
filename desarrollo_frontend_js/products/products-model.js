@@ -4,14 +4,14 @@
 
 export async function getProducts() {
         try {
-        const response = await fetch("http://localhost:8000/api/products?_expand=user");
+        const response = await fetch("http://localhost:8000/api/tweets?_expand=user");
         const products = await response.json();
         
         if (!response.ok) {
         throw new Error("Recurso no existente");
         }
 
-        return message;
+        return products;
 
     } catch (error) {
         throw new Error(error.message)

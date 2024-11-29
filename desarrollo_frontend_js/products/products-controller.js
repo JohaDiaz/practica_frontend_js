@@ -7,14 +7,15 @@ function drawProducts(products, productsContainer) {
   if(!products.length) {
     productsContainer.innerHTML = buildEmptyProductList();
   } else {
+
     products.forEach(product => {
       const newProduct = buildProduct(product);
+
       productsContainer.appendChild(newProduct);
-    
+
     })
   }
 }
-
 function fireEvent(message, type, element) {
   const customEvent = new CustomEvent("loading-products-info", {
     detail: {
@@ -27,9 +28,9 @@ function fireEvent(message, type, element) {
 
 export async function productsController(productsContainer) {
   const spinner = document.querySelector('.spinner')
-  productsContainer.innerHTML = "";
+  productsContainer.innerHTML = " ";
 
-  spinner.classList.toggle('hidden');
+  //spinner.classList.toggle('hidden');
   try {
     const products = await getProducts();
     fireEvent("Productos cargados correctamente", "success", productsContainer);
@@ -38,6 +39,6 @@ export async function productsController(productsContainer) {
     // alert(error.message)
     fireEvent(error.message, "error", productsContainer);
   } finally {
-    spinner.classList.toggle('hidden');
+    //spinner.classList.toggle('hidden');
   }
 }
