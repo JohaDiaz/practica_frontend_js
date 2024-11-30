@@ -2,13 +2,18 @@ import { getCurrentUserInfo } from "../auth/auth-model.js"
 import { getProduct, removeProduct } from "./product-detail-model.js"
 import { buildDeleteButton, buildProductDetail } from "./product-detail-view.js"
 
+async function showProducts(product, productDetailContainer) {
+  productDetailContainer.innerHTML = buildProductDetail(product);
+}
+
 export async function productDetailController(productDetailContainer, productId) {
 
   try {
     const product = await getProduct(productId)
     const user = await getCurrentUserInfo();
 
-    productDetailContainer.innerHTML = buildProductDetail(product);//REVISAR
+//REVISAR
+const showProducts = await showProducts(product, productDetailContainer);
 
     if (user.id === product.user.id) {
       const removeButtonElement = buildDeleteButton();
@@ -30,6 +35,8 @@ export async function productDetailController(productDetailContainer, productId)
   }
   
 }
+
+
 
 
 // 1- conocer quién es el dueño del tweet mostrado. --> expand
