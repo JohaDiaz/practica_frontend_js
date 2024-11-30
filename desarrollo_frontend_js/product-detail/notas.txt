@@ -1,0 +1,1 @@
+   <button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary" type="button">Borrar Producto</button>

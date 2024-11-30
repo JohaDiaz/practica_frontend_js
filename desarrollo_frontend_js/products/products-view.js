@@ -46,7 +46,6 @@ productLink.innerHTML = `
                               <h6 class="text-success">Oferta Especial</h6>
                               <p class="text-success">Haz click en el anuncio para ver el detalle.</p>
                               <div class="d-flex flex-column mt-5">
-                                <button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary" type="button">Borrar</button>
                               </div>
                             </div>
                           </div>

@@ -8,17 +8,20 @@ export async function productDetailController(productDetailContainer, productId)
     const product = await getProduct(productId)
     const user = await getCurrentUserInfo();
 
+    productDetailContainer.innerHTML = buildProductDetail(product);//REVISAR
 
     if (user.id === product.user.id) {
       const removeButtonElement = buildDeleteButton();
-      productDetailContainer.appendChild(removeButtonElement);
+      const deleteButton = document.querySelector(".button-delete");
+      deleteButton.appendChild(removeButtonElement);
       removeButtonElement.addEventListener("click", async () => {
-        const shouldRemoveTweet = confirm('¿Seguro que quieres borrar el tweet?');
+        const shouldRemoveTweet = confirm('¿Estás seguro de que quieres borrar el producto?');
         if (shouldRemoveTweet) {
-          // gstión del error
-          await removeProduct(tweet.id);
+          // gestión del error
+          await removeProduct(product.id);
           window.location.href = "/"
         }
+        click.preventDefault();
       })
     }
   } catch (error) {

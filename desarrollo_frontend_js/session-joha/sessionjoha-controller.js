@@ -7,7 +7,7 @@ export function sessionController2(sessionJoha) {
   if (isUserLoggedIn()) {
     buildAuthorizedSession();
 
-    const closeSessionButton = sessionJoha.querySelector("button")
+    const closeSessionButton = sessionJoha.querySelector("#button-close")
     closeSessionButton.addEventListener("click", () => {
       localStorage.removeItem("jwt")
 

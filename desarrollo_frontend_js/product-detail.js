@@ -1,4 +1,5 @@
 import { productDetailController } from "./product-detail/product-detail-controller.js";
+import { sessionControllerClose  } from "./product-list-session/product-list-session-controller.js";
 
 
 
@@ -9,8 +10,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const productId = searchParams.get("id");
 
   // 2- acceder al nodo donde pintaremos el detalle del producto
-  const productDetailContainer = document.querySelector("#product-detail")
+  const productDetailContainer = document.querySelector("#product-detail");
   
-  productDetailController(productDetailContainer, productId)
+  productDetailController(productDetailContainer, productId);
+
+  const closesession = document.querySelector("#cerrarsesion");
+  sessionControllerClose(closesession)
 
 })
