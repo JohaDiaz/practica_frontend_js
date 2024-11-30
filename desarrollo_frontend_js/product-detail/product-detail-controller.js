@@ -2,49 +2,47 @@ import { getCurrentUserInfo } from "../auth/auth-model.js"
 import { getProduct, removeProduct } from "./product-detail-model.js"
 import { buildDeleteButton, buildProductDetail } from "./product-detail-view.js"
 
-async function showProducts(product, productDetailContainer) {
-  productDetailContainer.innerHTML = buildProductDetail(product);
-}
-
 export async function productDetailController(productDetailContainer, productId) {
-
   try {
-    const product = await getProduct(productId)
-    const user = await getCurrentUserInfo();
 
-//REVISAR
-const showProducts = await showProducts(product, productDetailContainer);
+      const product = await getProduct(productId);
+      const user = await getCurrentUserInfo();
 
-    if (user.id === product.user.id) {
-      const removeButtonElement = buildDeleteButton();
-      const deleteButton = document.querySelector(".button-delete");
-      deleteButton.appendChild(removeButtonElement);
-      removeButtonElement.addEventListener("click", async () => {
-        const shouldRemoveTweet = confirm('¿Estás seguro de que quieres borrar el producto?');
-        if (shouldRemoveTweet) {
-          // gestión del error
-          await removeProduct(product.id);
-          window.location.href = "/"
-        }
-        click.preventDefault();
-      })
-    }
+      
+      productDetailContainer.innerHTML = buildProductDetail(product);
+
+    
+      const deleteButtonContainer = productDetailContainer.querySelector(".button-delete");
+      
+      console.log("userId systema", user.id)
+      console.log("userId producto", product.user.id)
+      
+     
+      if (user.id === product.user.id) {
+          
+          const removeButtonElement = buildDeleteButton();
+          deleteButtonContainer.appendChild(removeButtonElement);
+
+          
+          removeButtonElement.addEventListener("click", async () => {
+              const shouldRemove = confirm('¿Estás seguro de que quieres borrar el producto?');
+              if (shouldRemove) {
+                  try {
+                      await removeProduct(product.id);
+                      alert("Producto eliminado con éxito.");
+                      window.location.href = "/";
+                  } catch (error) {
+                      console.error("Error al eliminar el producto:", error);
+                      alert("Hubo un problema al eliminar el producto.");
+                  }
+              }
+          });
+      } else {
+          console.log("El usuario actual no es el propietario del producto.");
+      }
   } catch (error) {
-    alert(error.message)
-    window.location.href = "/"
+      console.error("Error al cargar el detalle del producto:", error);
+      alert("Hubo un problema al cargar el detalle del producto.");
+      window.location.href = "/";
   }
-  
 }
-
-
-
-
-// 1- conocer quién es el dueño del tweet mostrado. --> expand
-
-// 2- conocer el identificador del usuario logado.
-
-// 3- comparar el id del autor del tweet mostrado con el id del usuario logado
-
-// 4- si los id's son iguales, pintar el boton
-
-// 5- cuando el botón se pulse, borrar el tweet, previa confirmación

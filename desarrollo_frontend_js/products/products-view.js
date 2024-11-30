@@ -25,12 +25,14 @@ productLink.innerHTML = `
                                 </a>
                               </div>
                             </div>
-                            <div class="col-md-6 col-lg-6 col-xl-6">
+                            <div class="col-md-6 col-lg-6 col-xl-6 text-capitalize">
                               <h5>${product.productName}</h5>
+                              <p class="text-info text-truncate mb-4 mb-md-0">Id del Usuario: ${product.userId}</p>
                               <p class="text-truncate mb-4 mb-md-0">
                               ${product.productDescription}
                                </p>
-                         
+
+                               
                               <div class="mt-1 mb-0 text-muted small">
                                 <input class="btn btn-primary btn-sm" type="button" value="Input">
                                 <input class="btn btn-primary btn-sm" type="button" value="Input">

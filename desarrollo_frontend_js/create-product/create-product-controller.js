@@ -9,25 +9,28 @@ export function createProductController(createProductForm) {
     const productDescription = createProductForm.querySelector("#product-description");
     const productPrice = createProductForm.querySelector("#product-price");
     const productImage = createProductForm.querySelector("#product-image");
-  
+    const transactionStatus = createProductForm.querySelector("input[name='transaction']:checked");
+    const productTransaction = transactionStatus.value;
 
-    const productMessage = {
+    alert(productTransaction);
+    const productData = {
       productName: productName.value,
       productDescription: productDescription.value,
       productPrice: productPrice.value,
-      productImage: productImage.value
+      productImage: productImage.value,
+      productTransaction: productTransaction
     }
 
-    handleProductCreation(productMessage)
+    handleProductCreation(productData)
   })
 
-  async function handleProductCreation(productMessage) {
+  async function handleProductCreation(productData) {
     // 2- crear producto
     try {
-      await createProduct(productMessage)
+      await createProduct(productData)
       window.location.href = "/"
     } catch (error) {
-      alert(error.message)
+      alert(error.message) //crear el mensaje de error
     }
   }
 
