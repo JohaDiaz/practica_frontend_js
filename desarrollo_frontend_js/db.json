@@ -1,0 +1,156 @@
+{
+  "users": [
+    {
+      "username": "joha@kc.io",
+      "password": "$2b$10$TWwDfP5d6wxUSU/25WWrv.rvTq8G.tZuph60Ih97.bbl5S3aGmLiO",
+      "id": 1
+    },
+    {
+      "username": "caro@kc.io",
+      "password": "$2b$10$TWwDfP5d6wxUSU/25WWrv.rvTq8G.tZuph60Ih97.bbl5S3aGmLiO",
+      "id": 2
+    },
+    {
+      "username": "alvi@kc.io",
+      "password": "$2b$10$Yh4VL1NGbSIR9NNDBT.mLO2KCfr.scc2pbFcqFcYopX/YWFHYizr.",
+      "id": 3
+    },
+    {
+      "username": "anna@kc.io",
+      "password": "$2b$10$Yh4VL1NGbSIR9NNDBT.mLO2KCfr.scc2pbFcqFcYopX/YWFHYizr.",
+      "id": 4
+    },
+    {
+      "username": "jose@kc.io",
+      "password": "$2b$10$m8Dmps4/1ndoh.GngaobJeae5A2QEOwN80aMigEdxIN/AXX0hiSbC",
+      "id": 5
+    },
+    {
+      "username": "malu@kc.io",
+      "password": "$2b$10$a2RBFgzDk555bAJmjDcgrOiABCe8fMMsQfF6YCBw/fDuOOldaU5re",
+      "id": 6
+    }
+  ],
+  "tweets": [
+    {
+      "productName": "Sofá",
+      "productDescription": "Elemento práctico para el hogar.",
+      "productPrice": "290",
+      "productImage": "",
+      "productTransaction": "Vender",
+      "userId": 1,
+      "updatedAt": "2024-12-01T14:47:47.571Z",
+      "id": 1
+    },
+    {
+      "productName": "PS5",
+      "productDescription": "Consola de última generación.",
+      "productPrice": "512",
+      "productImage": "",
+      "productTransaction": "Comprar",
+      "userId": 1,
+      "updatedAt": "2024-12-01T14:48:34.434Z",
+      "id": 2
+    },
+    {
+      "productName": "Apple iPhone 16",
+      "productDescription": "Dispositivo tecnológico de última generación.",
+      "productPrice": "920",
+      "productImage": "",
+      "productTransaction": "Comprar",
+      "userId": 4,
+      "updatedAt": "2024-12-01T14:51:09.803Z",
+      "id": 3
+    },
+    {
+      "productName": "Zapatos Converser All Star",
+      "productDescription": "Prenda de vestir cómoda y moderna.",
+      "productPrice": "94",
+      "productImage": "",
+      "productTransaction": "Vender",
+      "userId": 4,
+      "updatedAt": "2024-12-01T14:52:29.305Z",
+      "id": 4
+    },
+    {
+      "productName": "Camiseta de Star Wars",
+      "productDescription": "Prenda de vestir cómoda y moderna.",
+      "productPrice": "45",
+      "productImage": "",
+      "productTransaction": "Comprar",
+      "userId": 3,
+      "updatedAt": "2024-12-01T14:53:55.044Z",
+      "id": 5
+    },
+    {
+      "productName": "Samsung GALAXY TAB A9",
+      "productDescription": "Dispositivo tecnológico de última generación.",
+      "productPrice": "259",
+      "productImage": "",
+      "productTransaction": "Vender",
+      "userId": 3,
+      "updatedAt": "2024-12-01T14:55:07.825Z",
+      "id": 6
+    },
+    {
+      "productName": "Lámpara de estudio",
+      "productDescription": "Elemento práctico para el hogar.",
+      "productPrice": "12",
+      "productImage": "",
+      "productTransaction": "Vender",
+      "userId": 2,
+      "updatedAt": "2024-12-01T14:57:37.662Z",
+      "id": 7
+    },
+    {
+      "productName": "VR Headset",
+      "productDescription": "Accesorio para consola de última generación.",
+      "productPrice": "505",
+      "productImage": "",
+      "productTransaction": "Comprar",
+      "userId": 2,
+      "updatedAt": "2024-12-01T14:58:14.892Z",
+      "id": 8
+    },
+    {
+      "productName": "Chaqueta de Cuero",
+      "productDescription": "Prenda de vestir cómoda y moderna.",
+      "productPrice": "115",
+      "productImage": "",
+      "productTransaction": "Vender",
+      "userId": 5,
+      "updatedAt": "2024-12-01T14:59:18.185Z",
+      "id": 9
+    },
+    {
+      "productName": "Smartwatch Xiaomi Redmi Watch 4",
+      "productDescription": "Dispositivo tecnológico de última generación.",
+      "productPrice": "99",
+      "productImage": "",
+      "productTransaction": "Comprar",
+      "userId": 5,
+      "updatedAt": "2024-12-01T15:00:21.631Z",
+      "id": 10
+    },
+    {
+      "productName": "Asus TUF Gaming 28\" ",
+      "productDescription": "Dispositivo tecnológico de última generación.",
+      "productPrice": "200",
+      "productImage": "",
+      "productTransaction": "Comprar",
+      "userId": 6,
+      "updatedAt": "2024-12-01T15:02:56.581Z",
+      "id": 11
+    },
+    {
+      "productName": "Botas de invierno ROXY",
+      "productDescription": "Prenda de vestir cómoda y moderna.",
+      "productPrice": "120",
+      "productImage": "",
+      "productTransaction": "Vender",
+      "userId": 6,
+      "updatedAt": "2024-12-01T15:03:36.917Z",
+      "id": 12
+    }
+  ]
+}
