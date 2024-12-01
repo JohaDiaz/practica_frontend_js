@@ -9,10 +9,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     sessionController2(sessionJoha)
     productsController(productsContainer)
+    
     const { showNotification } = notificationController(notificationsContainer)
     
     productsContainer.addEventListener("loading-products-info", (event) => {
-        showNotification(event.detail.message, event.detail.type); //editar
+        showNotification(event.detail.message, event.detail.type); 
         })
 })
 

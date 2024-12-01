@@ -10,12 +10,12 @@ function drawProducts(products, productsContainer) {
 
     products.forEach(product => {
       const newProduct = buildProduct(product);
-
       productsContainer.appendChild(newProduct);
 
     })
   }
 }
+
 function fireEvent(message, type, element) {
   const customEvent = new CustomEvent("loading-products-info", {
     detail: {
@@ -23,22 +23,24 @@ function fireEvent(message, type, element) {
       type,
     }
   });
-  element.dispatchEvent(customEvent); //no se como editar esta parte
+  element.dispatchEvent(customEvent); 
 }
 
 export async function productsController(productsContainer) {
-  const spinner = document.querySelector('.spinner')
-  productsContainer.innerHTML = " ";
 
-  //spinner.classList.toggle('hidden');
+  const spinner = document.querySelector('.spinner')
+  productsContainer.innerHTML = "";
+
+  spinner.classList.toggle('hidden');
+
   try {
     const products = await getProducts();
     fireEvent("Productos cargados correctamente", "success", productsContainer);
     drawProducts(products, productsContainer)
   } catch (error) {
-    // alert(error.message)
+    //alert(error.message)
     fireEvent(error.message, "error", productsContainer);
   } finally {
-    //spinner.classList.toggle('hidden');
+    spinner.classList.toggle('hidden');
   }
 }

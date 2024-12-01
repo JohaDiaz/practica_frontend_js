@@ -11,5 +11,4 @@ document.addEventListener("DOMContentLoaded", () => {
     const productsListContainer = document.querySelector("#products-list");
     productsController(productsListContainer);
 
-
 })

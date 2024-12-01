@@ -13,6 +13,6 @@ export async function createUser(email, password){
   });
 
   if (!response.ok) {
-    throw new Error("error creando usuario")
+    throw new Error("Error creando usuario")
   }
 }

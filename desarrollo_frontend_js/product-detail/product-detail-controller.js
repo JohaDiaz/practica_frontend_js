@@ -42,8 +42,8 @@ export async function productDetailController(productDetailContainer, productId)
           alert("No podrá borrar este producto porque no es el propietario.");
       }
   } catch (error) {
-      console.error("Error al cargar el detalle del producto:", error);
-      alert("Hubo un problema al cargar el detalle del producto.");
+      console.error("Error al cargar el detalle del producto", error);
+      alert("Hubo un problema al cargar el detalle del producto");
       window.location.href = "/";
   }
 }

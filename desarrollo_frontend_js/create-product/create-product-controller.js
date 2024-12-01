@@ -31,7 +31,7 @@ export function createProductController(createProductForm) {
       window.location.href = "/";
       alert("El producto se ha creado correctamente");
     } catch (error) {
-      alert("ha ocurruto un error");
+      alert("Ha ocurrido un error");
     }
   }
 

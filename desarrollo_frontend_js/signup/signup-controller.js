@@ -20,11 +20,14 @@ export function signupController(form) {
     // 2- validarlos
     const emailRegExp = new RegExp(REGEXP.mail);
     if (!emailRegExp.test(userEmail)) {
-      errors.push('formato de mail incorrecto')
+      errors.push('Formato de e-mail incorrecto')
+      alert("Formato de e-mail incorrecto")
+
     }
 
     if (password !== passwordConfirm) {
-      errors.push('las passwords no son iguales')
+      errors.push('Las contraseñas no son iguales')
+      alert("Las contraseñas no son iguales")
     }
 
     for (const error of errors) {
@@ -33,6 +36,7 @@ export function signupController(form) {
 
     if (errors.length === 0) {
       handleCreateUser(userEmail, password)
+      alert("Sesión creada con éxito")
     }
   })
 
