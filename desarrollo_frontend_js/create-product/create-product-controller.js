@@ -12,7 +12,7 @@ export function createProductController(createProductForm) {
     const transactionStatus = createProductForm.querySelector("input[name='transaction']:checked");
     const productTransaction = transactionStatus.value;
 
-    alert(productTransaction);
+ 
     const productData = {
       productName: productName.value,
       productDescription: productDescription.value,
@@ -28,9 +28,10 @@ export function createProductController(createProductForm) {
     // 2- crear producto
     try {
       await createProduct(productData)
-      window.location.href = "/"
+      window.location.href = "/";
+      alert("El producto se ha creado correctamente");
     } catch (error) {
-      alert(error.message) //crear el mensaje de error
+      alert("ha ocurruto un error");
     }
   }
 

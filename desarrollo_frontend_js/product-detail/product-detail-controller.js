@@ -39,6 +39,7 @@ export async function productDetailController(productDetailContainer, productId)
           });
       } else {
           console.log("El usuario actual no es el propietario del producto.");
+          alert("No podrá borrar este producto porque no es el propietario.");
       }
   } catch (error) {
       console.error("Error al cargar el detalle del producto:", error);
