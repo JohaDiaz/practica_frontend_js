@@ -2,6 +2,9 @@
 
 Este proyecto consiste en el desarrollo de una aplicación web similar a Wallapop, diseñada como una práctica para aplicar conocimientos de desarrollo frontend y manejo de APIs REST. La aplicación permite listar, crear, editar y eliminar anuncios, así como autenticar y registrar usuarios.
 
+## Base de datos 
+- El programa de basa en una base de datos tipo json, la cual se encuentra en la raiz del proyecto y su nombre es db.json.
+
 ## Funcionalidades Principales
 
 ### 1. Listado de Anuncios
